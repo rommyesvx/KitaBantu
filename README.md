@@ -1,3 +1,1 @@
-hahahahahaha
-semangat bang
-barang siapa
+oke
