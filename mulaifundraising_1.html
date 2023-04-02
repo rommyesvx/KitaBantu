@@ -20,7 +20,36 @@
 	.btn-rounded{
 		border-radius: 1rem;
 	}
+	.btn-sukses {
+		color: #fff;
+		background-color: #28a745;
+		border-color: #28a745;
+	}
+
+	.btn-sukses:hover {
+		color: #fff;
+		background-color: #218838;
+		border-color: #1e7e34;
+	}
 </style>
+<script type="text/javascript">
+	function changeClass(button){
+		var buttons = document.getElementsByClassName("btn");
+		for (var i = 0; i < buttons.length; i++) {
+			if (buttons[i] !== button) {
+				buttons[i].classList.remove("btn-success");
+				buttons[i].classList.add("btn-outline-success");
+			}
+		}
+		if (button.classList.contains("btn-success")) {
+			button.classList.remove("btn-success");
+			button.classList.add("btn-outline-success");
+		} else {
+			button.classList.remove("btn-outline-success");
+			button.classList.add("btn-success");
+		}
+	}
+</script>
 <body>
 	<div class="container-fluid h-100">
 		<div class="row justify-content-center h-100">
@@ -40,42 +69,45 @@
 					</div>
 
 					<div class="w-100"></div>
-					<div class="col ml-5">
+					<div class="col ml-4">
 						<div class="form-group">
 							<div class="form-row">
 								<div class="col">
-									<label><small>Provinsi</small></label>
+									
 									<select class="form-control form-rounded w-75">
 										<option>Jawa Timur</option>
 										<option>Jawa Barat</option>
 									</select>
 								</div>
 								<div class="col">
-									<label><small>Kode Pos</small></label>
-									<input type="text" class="form-control form-control-md mb-4 form-rounded w-50" name="">
+									
+									<input type="text" class="form-control form-control-md mb-4 form-rounded w-50" name="" placeholder="Kode Pos">
 								</div>
 							</div>
 							<div class="form-row">
 								<div class="col">
 									<h4>Kategori Penggalangan Dana anda</h4>
-								<div class="col w-75">
-									<div class="btn-rounded" data-toggle="button">
-										<button type="button" class="btn btn-outline-success btn-rounded m-1">Hewan</button>
-										<button type="button" class="btn btn-outline-success btn-rounded m-1">Hewan</button>
-										<button type="button" class="btn btn-outline-success btn-rounded m-1">Hewan</button>
-										<button type="button" class="btn btn-outline-success btn-rounded m-1">Hewan</button>
-										<button type="button" class="btn btn-outline-success btn-rounded m-1">Hewan</button>
-										<button type="button" class="btn btn-outline-success btn-rounded m-1">Hewan</button>
-										<button type="button" class="btn btn-outline-success btn-rounded m-1">Hewan</button>
-										<button type="button" class="btn btn-outline-success btn-rounded m-1">Hewan</button>
-										<button type="button" class="btn btn-outline-success btn-rounded m-1">Hewan</button>
-										<button type="button" class="btn btn-outline-success btn-rounded m-1">Hewan</button>
+									<div class="col">
+										<div class="btn-rounded" data-toggle="button">
+											<button type="button" class="btn btn-outline-success btn-rounded m-1" onclick="changeClass(this)">Hewan</button>
+											<button type="button" class="btn btn-outline-success btn-rounded m-1" onclick="changeClass(this)">Hewan</button>
+											<button type="button" class="btn btn-outline-success btn-rounded m-1" onclick="changeClass(this)">Hewan</button>
+											<button type="button" class="btn btn-outline-success btn-rounded m-1" onclick="changeClass(this)">Hewan</button>
+											<button type="button" class="btn btn-outline-success btn-rounded m-1" onclick="changeClass(this)">Hewan</button>
+											<button type="button" class="btn btn-outline-success btn-rounded m-1" onclick="changeClass(this)">Hewan</button>
+											<button type="button" class="btn btn-outline-success btn-rounded m-1" onclick="changeClass(this)">Hewan</button>
+											<button type="button" class="btn btn-outline-success btn-rounded m-1" onclick="changeClass(this)">Hewan</button>
+											<button type="button" class="btn btn-outline-success btn-rounded m-1" onclick="changeClass(this)">Hewan</button>
+										</div>
+										<!--<select class="form-control form-rounded w-50">
+											<option>Jawa Timur</option>
+											<option>Jawa Barat</option>
+										</select> -->
 									</div>
-									
-								</div>
 								</div>
 							</div>
-							<button type="button" class="btn btn-success mt-2">Continue</button>
+							
+							<a class="btn btn-sukses mt-2" href="mulaifundraising_2.html" role="button" aria-pressed="true">Continue</a>
 						</div>
 					</div>
 				</div>

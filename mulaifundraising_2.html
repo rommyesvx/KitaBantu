@@ -25,12 +25,27 @@
 	#tes{
 
 	}
-	
-	.cardanu:focus{
-		background-color: blue;
-	}
 </style>
-
+<script type="text/javascript">
+	function changeClass(div){
+		var btns = document.getElementsByClassName("cardanu");
+		for(var i = 0; i < btns.length; i++){
+			if(btns[i] !== div){
+				btns[i].classList.remove("bg-success");
+				btns[i].classList.add("bg-white");
+			}
+		}
+		if(div.classList.contains("bg-success")){
+			div.classList.remove("bg-success");
+			div.classList.add("bg-white");
+			
+		}else{
+			div.classList.remove("bg-white");
+			div.classList.add("bg-success");
+			
+		}
+	}
+</script>
 <body>
 	<div class="container-fluid h-100">
 		<div class="row justify-content-center h-100">
@@ -52,22 +67,22 @@
 						<div class="form-group">
 							<div class="form-row">
 								<div class="col">
-									 <div class="row border-dark border mr-3 cardanu" style="border-width: 1px !important; border-radius: 20px; padding-bottom: 20px;">
+									<div class="row border-dark border mr-3 cardanu" onclick="changeClass(this)" style="border-width: 1px !important; border-radius: 20px; padding-bottom: 20px;">
 										<div class="col-sm-8 pl-3 mt-3 mb-3">
 											<p class="font-weight-bold" id="tes">
-												Diri Anda <br><small class="text-secondary">Hasil Penggalangan akan langsung dikirimkan ke rekening anda</small>
+												Diri Anda <br><small class="font-weight-light">Hasil Penggalangan akan langsung dikirimkan ke rekening anda</small>
 												<a href="#" class="stretched-link">
-										</a>
+												</a>
 											</p>
 										</div>
 										<div class="col-sm-4 text-right">
 											<img src="images/yourself.png" style="width: 50%;">
 										</div> 
 									</div>
-									<div class="row border-dark border mr-3 mt-4" style="border-width: 1px !important; border-radius: 20px; padding-bottom: 20px;">
+									<div class="row border-dark border mr-3 mt-4 cardanu" onclick="changeClass(this)" style="border-width: 1px !important; border-radius: 20px; padding-bottom: 20px;">
 										<div class="col-sm-8 pl-3 mt-3 mb-3">
 											<p class="font-weight-bold">
-												Orang Lain <br><small class="text-secondary">Anda akan mengundang penerima untuk menerima dana atau mendistribusikannya sendiri</small>
+												Orang Lain <br><small class="font-weight-light">Anda akan mengundang penerima untuk menerima dana atau mendistribusikannya sendiri</small>
 												<a href="#" class="stretched-link"></a>
 											</p>
 										</div>
@@ -75,10 +90,10 @@
 											<img src="images/someone.png" style="width: 50%;">
 										</div>
 									</div>
-									<div class="row border-dark border mr-3 mt-4" style="border-width: 1px !important; border-radius: 20px; padding-bottom: 20px;">
+									<div class="row border-dark border mr-3 mt-4 cardanu" onclick="changeClass(this)" style="border-width: 1px !important; border-radius: 20px; padding-bottom: 20px;">
 										<div class="col-sm-8 pl-3 mt-3 mb-3">
 											<p class="font-weight-bold">
-												Charity <br><small class="text-secondary">Dana akan dikirimkan ke pada lembaga nonprofit</small>
+												Charity <br><small class="font-weight-light">Dana akan dikirimkan ke pada lembaga nonprofit</small>
 												<a href="#" class="stretched-link"></a>
 											</p>
 										</div>
@@ -88,14 +103,14 @@
 									</div>
 									<div class="row">
 										<div class="col text-left mt-3">
-											<button type="button" class="btn border-dark" style="border-radius: 15px;" fdprocessedid="ymgax">
+											<a class="btn border-dark border" style="border-radius:15px" href="mulaifundraising_1.html" role="button" aria-pressed="true">
 												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
 													<path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
 												</svg>
-											</button>
+											</a>
 										</div>
 										<div class="col text-right mr-3">
-											<button type="button" class="btn btn-success mt-3">Continue</button>
+											<a class="btn btn-success mt-3" href="mulaifundraising_3.html" role="button" aria-pressed="true">Continue</a>
 										</div>
 									</div>
 								</div>
